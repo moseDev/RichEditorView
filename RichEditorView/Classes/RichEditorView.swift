@@ -135,7 +135,7 @@ import UIKit
     }
     
     private func setup() {
-        backgroundColor = .red
+        backgroundColor = .clear
         
         webView.frame = bounds
         webView.delegate = self
@@ -143,10 +143,11 @@ import UIKit
         webView.scalesPageToFit = false
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         webView.dataDetectorTypes = UIDataDetectorTypes()
-        webView.backgroundColor = .white
+        webView.isOpaque = false
+        webView.backgroundColor = .clear
         
         webView.scrollView.isScrollEnabled = isScrollEnabled
-        webView.scrollView.bounces = false
+        webView.scrollView.bounces = true
         webView.scrollView.delegate = self
         webView.scrollView.clipsToBounds = false
         
